@@ -22,9 +22,18 @@ $ cd NanoAODRun1Examples/
 In the ROOT docker container, X11 graphics can be viewed using the built in VNC connection. In the container, execute:
 ```
 $ start_vnc
-...output...
+Starting VNC server...
+[1] 467
+[2] 471
+[3] 472
+[4] 473
+VNC connection points:
+        VNC viewer address: 127.0.0.1::5901
+        HTTP access: http://127.0.0.1:6080/vnc.html
 ```
-Paste the URL into your browser and select "connect". Provide the default password `cms.cern`. At the end of your session, stop the VNC connection by executing `stop_vnc`
+Paste the HTTP access URL into your browser (or the VNC viewer address into a standalone VNC program) and select "connect". Provide the default password `cms.cern`. All images from the ROOT scripts in these examples will appear on this VNC screen. 
+
+At the end of your session, before closing the docker container, stop the VNC connection by executing `stop_vnc`.
 
 ## 2010 Open Data example
 
@@ -33,6 +42,14 @@ Create a histogram of the dimuon mass spectrum in 2010 data by running:
 ```
 $ cd dimuon_2010/
 $ root -l -b -q MuHistos_eospublic.cxx++
+
+Processing MuHistos_eospublic.cxx...
+reading root://eospublic.cern.ch//eos/opendata/cms/derived-data/NanoAODRun1/01-Jul-22/Run2010B_Mu_merged.root
+writing to MuHistos_Mu_eospublic.root
+entries = 26718043
+event nr 0
+...periodic event number update...
+
 ```
 
 Depending on network connection, this might take about 40 minutes. The script will produce a ROOT file containing several histograms. Reading the script will show you how to:
@@ -50,7 +67,8 @@ To draw the mass spectrum:
 $ start_vnc # only if not done already in this session
 $ root -l MuHistos_Mu_eospublic.root
 root [1] GM_mass_log->Draw()
-root [2] .q
+root [2] c1->SetLogY(1)
+root [3] .q
 ```
 
 ![dimuon histogram from 2010 in log-log scale](dimuon_2010/MuHistos_eospublic_mass.png)
@@ -71,6 +89,8 @@ To run the TTree example (this may take several hours, depending on network conn
 $ start_vnc # only if not done already in this session
 $ cd dimuon_2011/
 $ root -l Dimuon2011_eospublic.C
+Processing Dimuon2011_eospublic.C...
+high pt dimuon
 ```
 
 You will see a plot similar to Figure 11 in [this Conference Report](https://inspirehep.net/literature/1292243)
