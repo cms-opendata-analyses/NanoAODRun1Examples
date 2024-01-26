@@ -49,7 +49,6 @@ writing to MuHistos_Mu_eospublic.root
 entries = 26718043
 event nr 0
 ...periodic event number update...
-
 ```
 
 Depending on network connection, this might take about 40 minutes. The script will produce a ROOT file containing several histograms. Reading the script will show you how to:
@@ -67,7 +66,7 @@ To draw the mass spectrum:
 $ start_vnc # only if not done already in this session
 $ root -l MuHistos_Mu_eospublic.root
 root [1] GM_mass_log->Draw()
-root [2] c1->SetLogY(1)
+root [2] c1->SetLogy(1)
 root [3] .q
 ```
 
@@ -89,8 +88,15 @@ To run the TTree example (this may take several hours, depending on network conn
 $ start_vnc # only if not done already in this session
 $ cd dimuon_2011/
 $ root -l Dimuon2011_eospublic.C
+
 Processing Dimuon2011_eospublic.C...
 high pt dimuon
+all MuOnia
+Quarkonium/Low pT dimuon only
+Quarkonium and Upsilon
+Quarkonium and B0
+Quarkonium and Jpsi
+Quarkonium and Jpsi/psiprime
 ```
 
 You will see a plot similar to Figure 11 in [this Conference Report](https://inspirehep.net/literature/1292243)
