@@ -99,7 +99,7 @@ Quarkonium and Jpsi
 Quarkonium and Jpsi/psiprime
 ```
 
-You will see a plot similar to Figure 11 in [this Conference Report](https://inspirehep.net/literature/1292243)
+You will see (briefly!) a plot similar to Figure 11 in [this Conference Report](https://inspirehep.net/literature/1292243)
 ![dimuon plot, no labels](dimuon_2011/Dimuon2011_eospublic.png)
 
 The RDataFrame script produces the same plot in the end, but shows how to process a NanoAOD file through RDataFrame actions such as `Filter()`, `Define()`, and `Histo1D()`. 
@@ -108,7 +108,33 @@ To run the RDataFrame example (this should be much quicker, 10-20 minutes), firs
 ```
 $ start_vnc # only if not done already in this session
 $ cd dimuon_2011/
-$ root -l root -l Dimuon2011_eospublic_RDF2.C
+$ root -l Dimuon2011_eospublic_RDF2.C
+Processing Dimuon2011_eospublic_RDF2.C...
+Info in <TCanvas::Print>: file Dimuon2011_eospublic_RDF2.png has been created
+Info in <TCanvas::Print>: pdf file Dimuon2011_eospublic_RDF2.pdf has been created
+Run number: pass=24572802   all=35287778   -- eff=69.64 % cumulative eff=69.64 %
+Dimuon threshold: pass=5277068    all=24572802   -- eff=21.48 % cumulative eff=14.95 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold and sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+HLT       : pass=3418759    all=40206351   -- eff=8.50 % cumulative eff=6.11 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold & sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+J/Psi threshold: pass=35226938   all=40206351   -- eff=87.62 % cumulative eff=63.00 %
+HLT       : pass=23438007   all=35226938   -- eff=66.53 % cumulative eff=41.92 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold and sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold and sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold and sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold and sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+Run number: pass=40550056   all=55915322   -- eff=72.52 % cumulative eff=72.52 %
+Dimuon threshold & sample overlap: pass=40206351   all=40550056   -- eff=99.15 % cumulative eff=71.91 %
+HLT       : pass=10891153   all=40206351   -- eff=27.09 % cumulative eff=19.48 %
+Elapsed time in seconds: 1061 sec
+Elapsed time in minutes: 17 min
+Number of threads: 12
 ```
 
 You will see a plot similar to Figure 68 in [this paper](https://inspirehep.net/literature/1485699).
