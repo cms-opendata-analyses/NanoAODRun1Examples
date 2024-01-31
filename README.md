@@ -153,6 +153,12 @@ To run the C++ script:
 $ start_vnc # only if not done already in this session
 $ cd dimuon_2012/
 $ root -l dimuonSpectrum2012_eospublic.C
+root [0]
+Processing dimuonSpectrum2012_eospublic.C...
+Info in <TCanvas::Print>: pdf file dimuonSpectrum2012_C_eospublic.pdf has been created
+Events with two or more muons: pass=59571658   all=61540413   -- eff=96.80 % cumulative eff=96.80 %
+Muons with opposite charge: pass=37597805   all=59571658   -- eff=63.11 % cumulative eff=61.09 %
+root [1] .q
 ```
 
 To run the Python script:
@@ -160,12 +166,15 @@ To run the Python script:
 $ start_vnc # only if not done already in this session
 $ cd dimuon_2012/
 $ python dimuonSpectrum2012_eospublic.py
+Info in <TCanvas::Print>: pdf file dimuonSpectrum2012_py_eospublic.pdf has been created
+Events with at least two muons: pass=59571658   all=61540413   -- eff=96.80 % cumulative eff=96.80 %
+Muons with opposite charge: pass=37597805   all=59571658   -- eff=63.11 % cumulative eff=61.09 %
 ```
 
 You will see a plot like this:
 ![2012 dimuon plot](dimuon_2012/dimuonSpectrum2012.png)
 
-Close the ROOT session using `.q`, or exit python using `exit()`. Remember to use `stop_vnc` to close the docker container graphics connection when you are finished with your session.
+Remember to use `stop_vnc` to close the docker container graphics connection when you are finished with your session.
 
 ## Downloading files locally
 
