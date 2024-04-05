@@ -4,7 +4,7 @@ Public usage examples for NanoAODRun1 are being provided here to illustrate how 
 
 More information on these examples can also be found in this [CERN TWiki](https://twiki.cern.ch/twiki/bin/view/CMSPublic/NanoAODRun1Examples), and this [CMS Open data workshop presentation](https://indico.cern.ch/event/1139022/contributions/4969980/attachments/2488290/4273320/NanoAODRun1ODWS.pdf).
 
-CMS anticipates that about 50% of its publishable physics analyses can be performed using information stored in the NanoAOD format. For Run 1 Open Data, the NanoAOD format can be mimicked by processing AOD files through the [NanoAODRun1ProducerTool](https://opendata-qa.cern.ch/record/12505) (FIXME: remove qa). This tool is not intended to be pedagogical, but can be run using the CMSSW docker containers or virtual machines. The NanoAOD files needed for these analysis examples are available on the Open Data Portal as derived datasets.
+CMS anticipates that about 50% of its publishable physics analyses can be performed using information stored in the NanoAOD format. For Run 1 Open Data, the NanoAOD format can be mimicked by processing AOD files through the [NanoAODRun1ProducerTool](https://opendata.cern.ch/record/12505). This tool is not intended to be pedagogical, but can be run using the CMSSW docker containers or virtual machines. The NanoAOD files needed for these analysis examples are available on the Open Data Portal as derived datasets.
 
 Users interested in pedagogical code at AOD level are referred to the [POET framework](https://opendata.cern.ch/record/12501), which can be used to create NanoAOD-like files with content customized by the user. 
 
